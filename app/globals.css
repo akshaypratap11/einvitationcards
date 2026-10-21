@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --wine: #2b0d16;
+  --maroon: #5a1731;
+  --gold: #c9a24b;
+  --gold-light: #f3e2a9;
+  --cream: #fbf3e4;
+  --blush: #f6e3e1;
+}
+
+body {
+  background-color: #2b0d16;
+  color: #fbf3e4;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f3e2a9 0%, #c9a24b 45%, #fff1b8 70%, #9e7829 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #c9a24b 0%, #ecd58b 50%, #b2862c 100%);
+}
+
+.festive-border {
+  border: 1px solid rgba(201, 162, 75, 0.35);
+}
+
+.festive-pattern-bg {
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(201, 162, 75, 0.12) 0%, transparent 70%),
+    repeating-linear-gradient(45deg, rgba(201, 162, 75, 0.03) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(-45deg, rgba(201, 162, 75, 0.03) 0 1px, transparent 1px 24px);
+}
+
+.mandala-glow {
+  box-shadow: 0 0 60px -10px rgba(201, 162, 75, 0.25);
+}
