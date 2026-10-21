@@ -50,7 +50,7 @@ export default function CreateWizard({
   const form = useForm<CardFormValues>({
     resolver: zodResolver(cardFormSchema),
     defaultValues: initialData || getDefaultFormValues(initialType),
-    mode: "onChange",
+    mode: "onTouched",
   });
 
   const {

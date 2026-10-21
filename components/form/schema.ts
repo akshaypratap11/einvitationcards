@@ -10,7 +10,7 @@ export const eventItemSchema = z.object({
   tagline: z.string().optional(),
   date: z.string().min(1, "Date is required"),
   time: z.string().min(1, "Time is required"),
-  venue: z.string().min(2, "Venue is required"),
+  venue: z.string().optional().default(""),
   photo: z.string().optional(),
 });
 
