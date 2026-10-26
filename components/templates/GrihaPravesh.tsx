@@ -3,12 +3,6 @@
 
 import React, { useEffect, useRef, useState, useMemo } from "react";
 import Link from "next/link";
-import {
-  Great_Vibes,
-  Playfair_Display,
-  Cormorant_Garamond,
-  Noto_Serif_Devanagari,
-} from "next/font/google";
 import { CardData, Lang } from "@/types/card";
 import { getI18n } from "@/lib/i18n";
 import {
@@ -39,36 +33,6 @@ import {
   PhotoPair,
   SectionHeading,
 } from "./shared";
-
-// Load fonts via next/font (no external <link>)
-const greatVibes = Great_Vibes({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-script",
-  display: "swap",
-});
-
-const playfairDisplay = Playfair_Display({
-  weight: ["500", "700"],
-  subsets: ["latin"],
-  variable: "--font-title",
-  display: "swap",
-});
-
-const cormorantGaramond = Cormorant_Garamond({
-  weight: ["400", "600"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-});
-
-const notoSerifDevanagari = Noto_Serif_Devanagari({
-  weight: ["500", "700"],
-  subsets: ["devanagari"],
-  variable: "--font-dev",
-  display: "swap",
-});
 
 export interface GrihaPraveshProps {
   data: CardData;
@@ -217,9 +181,7 @@ export default function GrihaPravesh({
   return (
     <div
       ref={containerRef}
-      className={`griha-pravesh ${greatVibes.variable} ${playfairDisplay.variable} ${cormorantGaramond.variable} ${notoSerifDevanagari.variable} ${
-        isReady ? "ready" : ""
-      }`}
+      className={`griha-pravesh ${isReady ? "ready" : ""}`}
     >
       {/* Scoped CSS Injection */}
       <style dangerouslySetInnerHTML={{ __html: GRIHA_PRAVESH_CSS }} />

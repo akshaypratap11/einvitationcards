@@ -3,6 +3,10 @@
 
 export const GRIHA_PRAVESH_CSS = `
 .griha-pravesh {
+  --font-script: 'Great Vibes', cursive;
+  --font-title: 'Playfair Display', Georgia, serif;
+  --font-body: 'Cormorant Garamond', Georgia, serif;
+  --font-dev: 'Noto Serif Devanagari', 'Cormorant Garamond', serif;
   --dg: #0c2016;
   --dg2: #1c4a32;
   --gold: #c9a24b;

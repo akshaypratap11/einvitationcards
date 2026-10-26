@@ -1,6 +1,9 @@
 export const BIRTHDAY_CELEBRATION_CSS = `
 /* Scoped Birthday Celebration Template Styles */
 .bday-cel {
+  --font-script: 'Great Vibes', cursive;
+  --font-title: 'Playfair Display', Georgia, serif;
+  --font-body: 'Cormorant Garamond', Georgia, serif;
   --navy: #0d1230;
   --navy2: #1b2150;
   --gold: #c9a24b;

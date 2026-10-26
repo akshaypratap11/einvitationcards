@@ -3,7 +3,6 @@
 
 import React, { useEffect, useRef, useState, useMemo } from "react";
 import Link from "next/link";
-import { Great_Vibes, Playfair_Display, Cormorant_Garamond } from "next/font/google";
 import { CardData, Lang } from "@/types/card";
 import { getI18n } from "@/lib/i18n";
 import {
@@ -34,29 +33,6 @@ import {
   PhotoPair,
   SectionHeading,
 } from "./shared";
-
-// Load fonts via next/font
-const greatVibes = Great_Vibes({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-script",
-  display: "swap",
-});
-
-const playfairDisplay = Playfair_Display({
-  weight: ["500", "700"],
-  subsets: ["latin"],
-  variable: "--font-title",
-  display: "swap",
-});
-
-const cormorantGaramond = Cormorant_Garamond({
-  weight: ["400", "600"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-});
 
 export interface BirthdayCelebrationProps {
   data: CardData;
@@ -199,9 +175,7 @@ export default function BirthdayCelebration({
   return (
     <div
       ref={containerRef}
-      className={`bday-cel ${greatVibes.variable} ${playfairDisplay.variable} ${cormorantGaramond.variable} ${
-        isReady ? "ready" : ""
-      }`}
+      className={`bday-cel ${isReady ? "ready" : ""}`}
     >
       {/* Scoped CSS Injection */}
       <style dangerouslySetInnerHTML={{ __html: BIRTHDAY_CELEBRATION_CSS }} />
